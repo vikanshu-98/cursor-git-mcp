@@ -1,6 +1,6 @@
 const { execSync } = require("child_process");
 
-// Function to execute Git commands
+// Function to run Git commands
 function runGitCommand(command) {
     try {
         console.log(`🔄 Running: ${command}`);
@@ -10,16 +10,15 @@ function runGitCommand(command) {
     }
 }
 
-// Run Git automation
+// Automate Git Commit & Push
 function automateGit() {
     console.log("🚀 Starting Git Automation...");
-
     runGitCommand("git add .");
-    runGitCommand('git commit -m "Automated commit"');
+    runGitCommand('git commit -m "Automated commit by Cursor AI"');
     runGitCommand("git push origin main");
-
     console.log("✅ Git Automation Complete!");
 }
 
 // Execute the function
 automateGit();
+
